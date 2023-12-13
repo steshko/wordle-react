@@ -16,9 +16,7 @@ function App() {
                 let currentGuess = g[currentWordIndex] ?? '';
                 if(e.key === "Enter" && currentGuess.length === 5){
                     setCurrentWordIndex(currentWordIndex + 1);
-                    if(currentGuess.toLowerCase() === word.toLowerCase()){
-                        setGameOver(true);
-                    }else if(currentWordIndex === 5){
+                    if(currentGuess.toLowerCase() === word.toLowerCase() || currentWordIndex === 5){
                         setGameOver(true);
                     }
                 }else if(e.key === "Backspace"){
