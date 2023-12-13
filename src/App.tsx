@@ -1,7 +1,5 @@
-import React, { useEffect, useState, useRef } from 'react';
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
-import Letter from './Letter';
 import Row from './Row';
 
 const word = 'Hello';
@@ -12,8 +10,8 @@ function App() {
     const [gameOver, setGameOver] = useState(false);
 
     useEffect(() => {
+        if(gameOver) return;
         const handler = (e: KeyboardEvent) => {
-            if(gameOver) return;
             setGuesses((g) => {
                 let currentGuess = g[currentWordIndex] ?? '';
                 if(e.key === "Enter" && currentGuess.length === 5){
