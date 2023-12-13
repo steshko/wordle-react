@@ -1,5 +1,11 @@
-.App {
-  text-align: center;
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100svh;
+  width: 100svw;
+  gap: 10px;
 }
 
 .App-logo {
@@ -35,4 +41,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row{
+  gap: 10px;
+}
+
+.letter-container{
+  height: 60px;
+  width: 60px;
+  border: 2px solid gray;
+
+  text-transform: uppercase;
+  font-size: 30px;
 }
